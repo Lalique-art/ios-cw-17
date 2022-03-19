@@ -29,26 +29,28 @@ struct ContentView: View {
                     .font(.system(size: 30, weight: .bold, design: .default))
                     .padding()
                 // name of new cases
-                ForEach(people, id: \.self) {i in
+                List(people, id: \.self) {i in
                     // الاسم
                         Text("الاسم:\(i.fullName)")
     // المنطقة
                         Text("المنطقة:\(i.area)")
                         // عدد الجرعات
                         Text("عدد الجرعات:\(i.numberOfDoses)")
-
+                
+                
+//                VStack{
+//        // الحالة الأولى
+//                // الاسم
+//                    Text("الاسم:\(people[0].fullName)")
+//// المنطقة
+//                    Text("المنطقة:\(people[0].area)")
+//                    // عدد الجرعات
+//                    Text("عدد الجرعات:\(people[0].numberOfDoses)")
+//
+//                Divider()
+//                }
                 }
-                VStack{
-        // الحالة الأولى
-                // الاسم
-                    Text("الاسم:\(people[0].fullName)")
-// المنطقة
-                    Text("المنطقة:\(people[0].area)")
-                    // عدد الجرعات
-                    Text("عدد الجرعات:\(people[0].numberOfDoses)")
-
-                Divider()
-                }
+            
                 VStack{
         // الحالة الثانية
                 // الاسم
