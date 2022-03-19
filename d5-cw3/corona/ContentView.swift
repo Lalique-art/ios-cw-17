@@ -9,7 +9,11 @@ import SwiftUI
 
 
 // يجب عمل هيكل وكائنات من الهيكل
-
+var people = [
+    UserCovidInfo(fullName: "maryam", area: "asmah", numberOfDoses: 2),
+    UserCovidInfo(fullName: "lolo", area: "jahra", numberOfDoses: 3),
+    UserCovidInfo(fullName: "amirah", area: "asmah", numberOfDoses: 2)
+]
 
 struct ContentView: View {
     var body: some View {
@@ -28,11 +32,11 @@ struct ContentView: View {
                 VStack{
         // الحالة الأولى
                 // الاسم
-               Text("")
+                    Text("الاسم:\(people[0].fullName)")
 // المنطقة
-                Text("")
+                    Text("المنطقة:\(people[0].area)")
                     // عدد الجرعات
-               Text("")
+                    Text("عدد الجرعات:\(people[0].numberOfDoses)")
 
                 Divider()
                 }
