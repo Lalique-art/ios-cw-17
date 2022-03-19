@@ -29,6 +29,15 @@ struct ContentView: View {
                     .font(.system(size: 30, weight: .bold, design: .default))
                     .padding()
                 // name of new cases
+                ForEach(people, id: \.self) {i in
+                    // الاسم
+                        Text("الاسم:\(i.fullName)")
+    // المنطقة
+                        Text("المنطقة:\(i.area)")
+                        // عدد الجرعات
+                        Text("عدد الجرعات:\(i.numberOfDoses)")
+
+                }
                 VStack{
         // الحالة الأولى
                 // الاسم
